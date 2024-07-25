@@ -1,6 +1,6 @@
 CXXFLAGS = -Wall -Wextra -pedantic-errors -O3
 SHARED_FLAGS = -fPIC -shared
-LDFLAGS = libsomething.a
+LDFLAGS = lib3rdparty.a
 SRC_PATH = src
 INCLUDE_PATH = include
 
@@ -13,7 +13,7 @@ test:
 	@chmod +x app_cmd
 
 myapp:
-	gcc -g $(CXXFLAGS) -I $(INCLUDE_PATH)/ -o libsomethingtf.so app_util.c $(LDFLAGS) $(SHARED_FLAGS)
+	gcc -g $(CXXFLAGS) -I $(INCLUDE_PATH)/ -o libappintf.so app_util.c $(LDFLAGS) $(SHARED_FLAGS)
 
 .PHONY: clean
 clean:
